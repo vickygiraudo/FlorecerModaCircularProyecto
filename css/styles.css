@@ -1,0 +1,309 @@
+/*propiedades de la página index.html*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ }
+    
+.cuerpo {
+    background-color: #4158D0;
+    background-image: linear-gradient(294deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+              
+.header{
+    background-color: #85FFBD;
+    background-image: linear-gradient(19deg, #85FFBD 0%, #FFFB7D 100%);
+    padding-bottom: 3rem;
+    margin: 1rem 2rem 3rem 2rem;
+}
+
+.titulo-pricipal {
+    display: flex;
+    color: rgb(49, 7, 49);
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 4rem;
+    grid-area: titulo-principal;
+    justify-items: center;
+    align-items: center;
+}
+
+header div img {
+    width: 10%;
+    z-index: 2;
+    display: inline;
+    position: fixed;
+    text-align: left;
+    grid-area: logo;
+}
+
+.home {
+ display: flex;
+ justify-content: center;
+ font-family: 'Stick No Bills', sans-serif;
+ font-size: 2.5rem;
+ background-color: beige;
+ height: 50px;
+ grid-area: home;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem; 
+    margin: 2rem;
+    padding: 3rem;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+
+.producto{
+    grid-area: producto;
+}
+
+.conoceme{
+    grid-area: conoceme;
+}
+
+.comunidad{
+    grid-area: comunidad;
+}
+
+.contacto{
+    grid-area: contacto;   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    border: solid; color: black ; width: 5px;
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+main{
+    display: none;
+    
+}
+
+.parrafo-uno-main {
+    grid-area: parrafo-uno-main ;
+}
+
+.parrafo-dos-main {
+    grid-area: parrafo-dos-main ;
+}
+
+
+.main-img1{
+    grid-area: main-img1;
+}
+
+.main-img2{
+    grid-area: main-img2;
+
+}
+
+.main-img3{
+    grid-area: main-img3;
+}
+
+.main-img4 {
+    grid-area: main-img4;
+}
+
+.titulo-main {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    margin: 25px;
+    text-align: center;
+    font-style: normal;
+    grid-area: titulo-main;
+}
+
+.parrafo-uno-main {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.parrafo-dos-main {
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+main img {
+    width: 200px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.footer {
+    color: aliceblue;
+    text-align: right;
+}
+
+/*media queris */
+
+@media screen and (min-width:600px) {
+    main{
+        display: block;
+        color: rgb(55, 44, 44);
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "titulo-main titulo-main titulo-main titulo-main"
+                         " parrafo-uno-main parrafo-uno-main parrafo-dos-main parrafo-dos-main " 
+                         " main-img1 main-img1 main-img2  main-img2"
+                         "main-img3 main-img3 main-img4 main-img4";
+    }
+}
+
+/*media queris pantalla 1024px*/
+
+@media screen and (min-width:1024px){
+    header{
+        display: flex;
+        justify-content: space-around;
+    }
+
+}
+
+/*propiedades de página Ecofriendly.cuerpo__home__h2 {
+    list-style: none;
+    margin: 10px;
+    color: black;
+}*/
+
+.video-main{
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.titulo-main{
+    color: aliceblue;
+    font-size: 35px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+}
+
+/*propiedades de la página conoceme*/
+
+.titulo-me {
+    color: rgb(44, 90, 75);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    padding: 10px;
+}
+
+.main-parrafo3{
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 30px;
+}
+
+main a img {
+    width: 10%;
+    display:inline-block;
+    text-align: end;
+}
+
+.main-instagram {
+   display:inline-block;
+   text-decoration: none;
+   color: pink;
+   font-family:cursive;
+}
+
+/*propiedades de la página contactos */
+
+main form legend {
+    color: beige;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    margin: 30px 15px 20px 15px;
+    padding: 10px;
+}
+
+main form div {
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin: 15px;
+}
+
+/*Propiedades de la página productos*/
+
+main nav ul li {
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 120px;
+    padding: 80px;
+    background-color:rgb(219, 130, 233);
+    position: relative;
+    text-align: center;
+
+}
+
+main nav ul li:hover{
+    background-color: tomato;
+}
+
+.cuerpo__menu__mujer__ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    padding: 0px;
+    background-color:rgb(52, 181, 181);
+    
+}
+
+.cuerpo__menu__mujer__ul {
+    font-size: 18px;
+    margin: 40px;
+    padding: 20px;
+}
+
+main nav ul li:hover > .cuerpo__menu__mujer__ul{
+    display: block;
+}
+
+.cuerpo__menu__hombre__ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    padding: 0px;
+    background-color:rgb(52, 181, 181);
+}
+
+.cuerpo__menu__hombre__ul {
+    font-size: 18px;
+    margin: 40px;
+    padding: 20px;
+}
+
+main nav ul li:hover > .cuerpo__menu__hombre__ul{
+    display: block;
+}
