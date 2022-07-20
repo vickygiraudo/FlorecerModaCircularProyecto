@@ -19,6 +19,14 @@
     margin: 1rem 2rem 3rem 2rem;
 }
 
+/*animación*/
+
+
+header h2:hover {
+   color: #4158D0;
+   font-weight: bold;
+}
+
 .titulo-pricipal {
     display: flex;
     color: rgb(49, 7, 49);

@@ -12,11 +12,16 @@
    
     <link rel="stylesheet" href="css/styles.css">
 
+    <!--Animaciones-->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Home-FlorecerModaCircular</title>
 </head>
 <body class="cuerpo">
 
       <!--Mi trabajo se tratará sobre una página de venta de ropa usada, Florecer Moda Circular-->
+      
    <div class="totalidad">
       <header class="header">
 
@@ -25,36 +30,41 @@
                   <img  src="img/LOGO MARCA.jpg" alt="Logo de la marca">
                </div>
 
-               <h1 class="titulo-principal"> Florecer Moda Circular </h1>
+               <h1 class="titulo-principal"><div data-aos="fade-up"
+                  data-aos-duration="3000"> Florecer Moda Circular </div></h1>
          </div>
                <h2 class="home"> Home </h2>
 
                <nav>
-                     <ul>
-                        <li class="producto">
-                              <a  href="pages/productos.html">
-                                    Productos 
-                              </a>   
-                        </li>
+                  <ul>
+                        <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                              <li class="producto">
+                                    <a  href="pages/productos.html">
+                                          Productos 
+                                    </a>   
+                              </li>
 
-                        <li class="conoceme">
-                              <a  href="pages/conoceme.html">
-                                 Conoceme 
-                              </a>     
-                        </li>
+                              <li class="conoceme">
+                                    <a  href="pages/conoceme.html">
+                                    Conoceme 
+                                    </a>     
+                              </li>
 
-                        <li class="comunidad">
-                              <a  href="pages/comunidadecofriendly.html">
-                                 Comunidad Ecofriendly
-                              </a>   
-                        </li>
+                              <li class="comunidad">
+                                    <a  href="pages/comunidadecofriendly.html">
+                                    Comunidad Ecofriendly
+                                    </a>   
+                              </li>
 
-                        <li class="contacto">
-                              <a  href="pages/contactos.html">
-                              Contactos 
-                              </a>     
-                        </li>
-                     </ul>
+                              <li class="contacto">
+                                    <a  href="pages/contactos.html">
+                                    Contactos 
+                                    </a>     
+                              </li>
+                        </div>
+                  </ul>
                </nav>      
          
       </header>
@@ -62,7 +72,8 @@
 
    <main class="main">
 
-         <h3 class="titulo-main"> Conocé más sobre mi propuesta y productos más destacados:</h3>
+      <h3  class="titulo-main"> 
+            <div data-aos="fade-up"data-aos-duration="3000"> Conocé más sobre mi propuesta y productos más destacados:</div></h3> 
 
          <p class="parrafo-uno-main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere molestias provident dignissimos ullam aspernatur ea quos voluptate optio iusto expedita itaque, dolores iste aperiam quae, nam officiis enim! Quisquam.</p>
 
@@ -79,6 +90,13 @@
          Todos los derechos reservados.
    </footer>
    
+      <!--Animaciones-->
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
       
 </body>
 </html>
