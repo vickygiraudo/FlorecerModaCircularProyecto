@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/styles.css">
+      <!-- links de fuentes-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
+  
+      <!-- link Bootstrap-->
+  
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  
+      <!-- link CSS  -->
+      <link rel="stylesheet" href="../css/styles.css">
 
     <title>Productos</title>
 
@@ -17,58 +23,134 @@
 
 <body class="cuerpo">
 
-   <header class="header">
+    <header class="container-fluid">
 
-
-      <div >
-         <img  src="../img/LOGO MARCA.jpg" alt="Logo de la marca">
-      </div>
-    
-      
-
-      <h1 class="titulo"> Florecer Moda Circular </h1>
-
-
-      <a class="home" href="../index.html">  
+        <div class="row">
+              <img  src="../img/LogoMarca.jpg" alt="Logo de la marca" class="col-4">
+  
+              <h1 class=" col-8 text-center "><div data-aos="fade-up"
+                 data-aos-duration="3000"> Florecer Moda Circular </div>
+              </h1>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg fondo-nav ">
+           <div class="container-fluid">
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+               <div class="navbar-nav">
+                 <a class="nav-link active" aria-current="page" href="#">
+                     <a href="../index.html">Home</a> 
+                 </a>
+                 <a class="nav-link" href="#">
+                     <a>Productos</a>
+                 </a>
+                 <a class="nav-link" href="#">
+                     <a href="../pages/conoceme.html">Conoceme</a>
+                 </a>
+                 <a class="nav-link" href="#">
+                    <a href="../pages/comunidadecofriendly.html">Comunidad</a> 
+                 </a>
+                 <a class="nav-link">
+                     <a href="../pages/contactos.html">Contactos</a>
+                 </a>
+               </div>
+             </div>
+           </div>
+        </nav>  
           
-          <h2> Home </h2> 
-      
-      </a>
-      
-
-      <nav>
-        <ul>
-           <li>
-              Productos                   
-            </li>
-
-             <li>  <a href="comunidadecofriendly.html">
-                      Comunidad Ecofriendly 
-                   </a>
-                                     
-             </li> 
-             
-             <li> 
-                   <a href="conoceme.html"> 
-                      Conoceme 
-                   </a>
-                    
-             </li>
-
-             <li> 
-               <a href="contactos.html"> 
-                  Contactos
-                </a>
-                                         
-             </li>
-          </ul>
-       </nav>   
-
-  </header>
+    </header>
 
 
-    <main class="main-menu">
-       <nav>
+    <main class=container-fluid>
+        
+           <!-- row de Remeras-->
+            <div class="row">
+                <h2 class="col-12">
+                    Remeras
+                </h2>
+                <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea corrupti, repudiandae unde dicta consequuntur quos optio eaque consequatur totam, deleniti laboriosam perferendis? Deleniti odit magnam veritatis optio tempore commodi inventore!</p>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../img/3RemerasMusculosas.jpeg" class="d-block w-100" alt="3 remeras musculosas">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/blusablanca.jpeg" class="d-block w-100" alt="Blusa Blanca">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/remeraMarron.jpeg" class="d-block w-100" alt="Remera Marrón">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+           <!-- row de Pantalones-->
+            <div class="row">
+                <h2 class="col-12">
+                    Pantalones
+                </h2>
+                <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat velit, eaque mollitia unde fugit, ad provident beatae aliquid dicta quos perferendis nemo incidunt eius recusandae laborum! Eius tempore debitis deleniti!</p>
+                <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../img/jeanNegro.jpeg" class="d-block w-100" alt="Jean Negro">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/ropa1JeanBlanco.jpeg" class="d-block w-100" alt="Jean Blanco">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/ropa2pantRosa.jpeg" class="d-block w-100" alt="Pantalón Rosa">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+
+         <!-- row de Accesorios-->
+            <div class="row">
+                <h2 class="col-12">
+                    Accesorios 
+                </h2>
+                <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fuga harum laudantium dolor, magnam esse, a impedit velit beatae quibusdam nostrum cumque quas laborum suscipit fugiat? Repellat iste inventore corrupti.</p>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../img/mochilaVerde.jpeg" class="d-block w-100" alt="Mochila verde">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/lentes nike.webp" class="d-block w-100" alt="Lentes Nike">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        
+    </main>
+    <!--<nav>
           <ul> 
               <li>
                   <h3 class="ropa-mujer"> Ropa Mujer</h3>
@@ -93,12 +175,15 @@
 
            </ul>
 
-        </nav>
-    </main>
-    
+        </nav>-->
+
+
     <footer class="footer">
          Todos los derechos reservados 
     </footer>
     
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 </body>
 </html>
