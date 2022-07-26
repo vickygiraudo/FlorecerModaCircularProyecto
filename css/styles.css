@@ -247,61 +247,17 @@ main form div {
     margin: 15px;
 }
 
-/*Propiedades de la página productos*/
+/* Propiedades de la página Productos*/
 
-main nav ul li {
-    color: beige;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+a:link{
+    color: black;
+    text-decoration: none;
     font-weight: bold;
-    display: inline-block;
-    margin: 120px;
-    padding: 80px;
-    background-color:rgb(219, 130, 233);
-    position: relative;
-    text-align: center;
-
-}
-
-main nav ul li:hover{
-    background-color: tomato;
-}
-
-.cuerpo__menu__mujer__ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 35px;
-    padding: 0px;
-    background-color:rgb(52, 181, 181);
     
 }
 
-.cuerpo__menu__mujer__ul {
-    font-size: 18px;
-    margin: 40px;
-    padding: 20px;
-}
-
-main nav ul li:hover > .cuerpo__menu__mujer__ul{
-    display: block;
-}
-
-.cuerpo__menu__hombre__ul {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 35px;
-    padding: 0px;
-    background-color:rgb(52, 181, 181);
-}
-
-.cuerpo__menu__hombre__ul {
-    font-size: 18px;
-    margin: 40px;
-    padding: 20px;
-}
-
-main nav ul li:hover > .cuerpo__menu__hombre__ul{
-    display: block;
+a:visited{
+    color: black;
+    margin: 0rem;
+    padding: 0.5rem;
 }
