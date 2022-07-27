@@ -1,16 +1,14 @@
-/*Propiedades de la página index.html*/
-
-/*reset*/
+/*Reset*/
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
  }
-    
+
+ /*Propiedades de la página index.html*/   
 .cuerpo {
-    background-color: #4158D0;
-    background-image: linear-gradient(294deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-color:whitesmoke;
 
 }
               
@@ -19,212 +17,149 @@
     background-image: linear-gradient(19deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
-/*animación*/
-
-header h2:hover {
-   color: #4158D0;
-   font-weight: bold;
-}
-
 header div h1 div {
-    display: flex;
     color: rgb(49, 7, 49);
     font-family: 'Stick No Bills', sans-serif;
     font-size: 4rem;
-    justify-items: center;
-    align-items: center;
 }
 
-header div img {
-    width: 2%;
-    text-align: left;
-    
+.container-fluid{
+    text-align: center;
 }
 
 .fondo-nav{
-    background-color: rgb(219, 173, 219) ;
+    background-color: #0a0e0b;
 }
+/*animación*/
 
-/*
-.home {
- display: flex;
- justify-content: center;
- font-family: 'Stick No Bills', sans-serif;
- font-size: 2.5rem;
- background-color: beige;
- height: 50px;
- grid-area: home;
+.titulo-main:hover {
+   color: #640b7a;
+   font-weight: bold;
 }
-*/
-/*
-nav{
-    display: flex;
-}
-
-nav ul li {
-    list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem; 
-    margin: 2rem;
-    padding: 3rem;
-    justify-content: space-around;
-    font-weight: bold;
-}
-
-
-nav ul li a {
-    text-decoration: none;
-    color: black; 
-    font-weight: bold;
-    border: solid; color: black ; width: 5px;
-    border-radius: 2rem;
-    margin: 1rem;
-    padding: 1.5rem;
-    text-align: center;
-}
-*/
-
-
-
 /*css del main con Grid */
 
 main{
-    display: grid;
+    background-color: rgb(218, 196, 171);
 }
 
-main h3 div {
-    color: rgb(14, 12, 12);
+.parrafos-main{
+    margin: 1.5rem;
+    display: grid;
+    grid-template-areas: "parrafo-uno-main parrafo-dos-main";
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+.titulo-main {
+
     font-size: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1.5rem;
+    margin-top: 2rem;
     text-align: center;
     font-style: normal;
     grid-area: titulo-main;
 }
 
+.img-index{
+    display: grid;
+    grid-template-areas:"main-img1 main-img2"
+                        "main-img3 main-img4"; 
+    margin:1rem;   
+    justify-content: center;   
+    align-items: center;
+}
 
+.main-img1{
+    width: 70%;
+    align-items: center;
+    grid-area: main-img1;
+    margin: 1rem;
+}
+
+.main-img2{
+    width: 70%;
+    align-items: center;
+    grid-area: main-img2;
+    margin: 1rem;
+}
+
+.main-img3{
+    width: 70%;
+    align-items: center;
+    grid-area: main-img3;
+    margin: 1rem;
+}
+
+.main-img4{
+    width: 100%;
+    align-items: center;
+    grid-area: main-img4;
+    margin: 1rem;
+}
 
 .footer {
     color: aliceblue;
+    background-color: #d655ce;
+    padding: 1rem;
     text-align: right;
+    font-weight: bold;
 }
 
-/*media queris */
 
-@media screen and (min-width:600px) {
-    main{
-        
-    color: rgb(55, 44, 44);
-    font-family: 'Questrial', sans-serif;
-    font-size: 25px;
-    margin: 40px;
-    display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr ;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "titulo-main titulo-main titulo-main titulo-main"
-                         "parrafo-uno-main parrafo-uno-main parrafo-dos-main parrafo-dos-main" 
-                         "main-img1 main-img1 main-img2 main-img2"
-                         "main-img3 main-img3 main-img4 main-img4";
-    align-items: center;
-    }
+/*Propiedades de página Comunidad Ecofriendly*/
 
-    .titulo-main{
-        grid-area: titulo-main ;
-    }
-
-    .parrafo-uno-main {
-        grid-area: parrafo-uno-main ;
-    }
-    
-    .parrafo-dos-main {
-        grid-area: parrafo-dos-main ;
-    }
-    .parrafo-uno-main {
-        margin: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    .parrafo-dos-main {
-        margin: 20px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    
-    main img {
-        width: 200px;
-        margin: 20px;
-        padding: 10px;
-    }
-    
-    .main-img1{
-        grid-area: main-img1;
-    }
-    
-    .main-img2{
-        grid-area: main-img2;
-    
-    }
-    
-    .main-img3{
-        grid-area: main-img3;
-    }
-    
-    .main-img4 {
-        grid-area: main-img4;
-    }
-    
+.titulo-main-eco{
+    color: rgb(46, 46, 66);
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 2rem;
 }
-
-/*media queris pantalla 1024px*/
-
-@media screen and (min-width:1024px){
-    header{
-        display: flex;
-        justify-content: space-around;
-    }
-
-}
-
-/*Propiedades de página Ecofriendly*/
 
 .video-main{
+    display: flex;
+    align-items: center;
     margin: 20px;
     padding: 30px;
     text-align: center;
 }
 
-.titulo-main{
-    color: aliceblue;
-    font-size: 35px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 30px;
-}
 
-/*Propiedades de la página conoceme*/
+/*Propiedades de la página Conoceme*/
 
 .titulo-me {
-    color: rgb(44, 90, 75);
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 20px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(28, 54, 46);
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 1.5rem;
+    padding: 1.5rem;
 }
 
 .main-parrafo3{
-    color: antiquewhite;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 30px;
+    color: rgb(16, 63, 16);
+    font-size: 1.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:3rem;
+    text-align: center;
+}
+
+.main-instagram {
+    text-align: right;
+    margin: 2rem;
+    padding: 2rem;
 }
 
 main a img {
-    width: 10%;
+    width: 8%;
     display:inline-block;
     text-align: end;
 }
 
 .main-instagram {
-   display:inline-block;
    text-decoration: none;
    color: pink;
    font-family:cursive;
@@ -233,18 +168,34 @@ main a img {
 /*Propiedades de la página contactos */
 
 main form legend {
-    color: beige;
+    display: flex;
+    justify-content: center;
+    color:rgb(27, 6, 6);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
-    margin: 30px 15px 20px 15px;
-    padding: 10px;
+    font-size: 3rem;
+    margin: 2rem 1rem 1.5rem 1rem;
+    padding: 2rem;
 }
 
 main form div {
-    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    color:#111425;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    margin: 15px;
+    font-size: 1.2rem;
+    width:bold;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.botones{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.botones2{
+    padding: 1rem;
+    margin: 1rem;
 }
 
 /* Propiedades de la página Productos*/
@@ -261,3 +212,96 @@ a:visited{
     margin: 0rem;
     padding: 0.5rem;
 }
+
+
+/* Media Queris - Mobile First */
+
+@media (min-width:768px) and (max-width:1200px) {
+
+    main{
+    color: rgb(55, 44, 44);
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.7rem;
+    margin:1.5rem;
+    
+    }
+    
+    .titulo-main{
+        grid-area: titulo-main ;
+    }
+
+    .parrafo-uno-main {
+        grid-area: parrafo-uno-main ;
+    }
+    
+    .parrafo-dos-main {
+        grid-area: parrafo-dos-main ;
+    }
+
+    .parrafo-uno-main {
+        margin: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .parrafo-dos-main {
+        margin: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .main-img1{
+        grid-area: main-img1;
+        width: 60%;
+       
+    }
+    
+    .main-img2{
+        grid-area: main-img2;
+        width: 50%;
+    }
+    
+    .main-img3{
+        grid-area: main-img3; 
+        width: 60%;  
+    }
+    
+    .main-img4 {
+        grid-area: main-img4;   
+        width: 80%;
+    }
+    
+}
+
+/* Media Queris - Pantalla min-width:1024px */
+
+@media screen and (min-width:1200px){
+
+    .img-index{
+        display: flex;
+        justify-content: space-around;
+
+    }
+
+    .main-img1{
+      grid-area: main-img1;
+      width: 15%;
+       
+    }
+    
+    .main-img2{
+        grid-area: main-img2;
+        width: 15%;
+    
+    }
+    
+    .main-img3{
+        grid-area: main-img3;
+        width: 15%;
+    }
+    
+    .main-img4 {
+        grid-area: main-img4;
+        width: 25%;
+    }cd 
+}
+
+
