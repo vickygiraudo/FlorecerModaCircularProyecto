@@ -1,18 +1,223 @@
+@charset "UTF-8";
+main form .botones, main form .botones2 {
+  border: 0.2rem solid black;
+  padding: 1rem;
+  margin: 1rem; }
 
-//variables
-$color-principal: whitesmoke;
-$color-secundario: rgb(218, 196, 171);
-$color-footer: rgb(138, 83, 83);
- 
-//import variables 
-@import "utilities/variables";
-//import páginas
-@import "utilities/conoceme";
-@import "utilities/contactos";
-@import "utilities/comunidad";
-@import "utilities/productos";
-@import "utilities/media-queris";
+/*Propiedades de la página Conoceme*/
+main .titulo-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #1b0606;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 1rem;
+  padding: 1rem; }
 
+main .main-parrafo3 {
+  color: #1c362e;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 1.5rem;
+  text-align: center; }
+
+main .contactos {
+  text-align: center;
+  text-decoration: none; }
+  main .contactos ul li:hover {
+    background-color: #cece9b;
+    transform: scale(1.5, 1.5); }
+  main .contactos .contactotelefono:hover {
+    transform: scale(1.1, 1.1); }
+  main .contactos .main-instagram:hover {
+    transform: scale(1.1, 1.1); }
+  main .contactos .contactomail:hover {
+    transform: scale(1.1, 1.1); }
+
+/*Propiedades de la página contactos */
+main form legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #1b0606;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 3rem;
+  margin: 2rem 1rem 1.5rem 1rem;
+  padding: 2rem; }
+
+main form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #111425;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  width: bold;
+  margin: 1rem;
+  padding: 1rem; }
+
+main .flores {
+  display: none; }
+
+main .concatos {
+  display: flex;
+  justify-content: space-around; }
+
+/*Propiedades de página Comunidad Ecofriendly*/
+main .titulo-main-eco {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #1b0606;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px black; }
+
+main .video-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem; }
+
+/* Propiedades de la página Productos*/
+main .remerassm {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1b0606;
+  text-decoration: underline;
+  text-align: center; }
+
+main .accesoriossm {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1b0606;
+  text-decoration: underline;
+  text-align: center; }
+
+main .pantalonessm {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1b0606;
+  text-decoration: underline;
+  text-align: center; }
+
+/* Media Queris - Mobile First */
+/* Media Queris min-width:768px and max-widht:1200px*/
+@media (min-width: 768px) and (max-width: 1200px) {
+  body {
+    /*media queris pagina conoceme*/
+    /*media queris pagina contacto*/ }
+    body .main {
+      font-size: 1.7rem;
+      margin: 1.5rem; }
+      body .main .floresfondo {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center; }
+      body .main .parrafos-main {
+        display: grid;
+        grid-template-areas: "parrafo-uno-main parrafo-dos-main"; }
+        body .main .parrafos-main .parrafo-uno-main {
+          padding-right: 2rem;
+          font-size: 1.7rem; }
+        body .main .parrafos-main .parrafo-dos-main {
+          padding-left: 2rem;
+          font-size: 1.7rem; }
+        body .main .parrafos-main .titulo-main {
+          grid-area: titulo-main; }
+        body .main .parrafos-main .parrafo-uno-main {
+          grid-area: parrafo-uno-main; }
+        body .main .parrafos-main .parrafo-dos-main {
+          grid-area: parrafo-dos-main; }
+      body .main .img-index {
+        display: grid;
+        grid-template-areas: "main-img1 main-img2" "main-img3 main-img4";
+        margin: 1rem;
+        justify-content: center;
+        align-items: center; }
+        body .main .img-index .main-img1 {
+          width: 60%;
+          align-items: center;
+          grid-area: main-img1;
+          margin: 1rem; }
+        body .main .img-index .main-img2 {
+          width: 50%;
+          align-items: center;
+          grid-area: main-img2;
+          margin: 1rem; }
+        body .main .img-index .main-img3 {
+          width: 60%;
+          align-items: center;
+          grid-area: main-img3;
+          margin: 1rem; }
+        body .main .img-index .main-img4 {
+          width: 80%;
+          align-items: center;
+          grid-area: main-img4;
+          margin: 1rem; }
+    body .contactos {
+      display: flex;
+      justify-content: space-around; }
+    body .flores {
+      display: block;
+      text-align: center;
+      margin: 1rem;
+      width: 20%; } }
+
+/* Media Queris - Pantalla min-width:1024px */
+@media screen and (min-width: 1200px) {
+  .main {
+    /*Media queris página conoceme y comunidad*/
+    /*Media queris página contacto*/ }
+    .main .floresfondo {
+      display: block;
+      text-align: center; }
+    .main .parrafos-main {
+      display: grid;
+      grid-template-areas: "parrafo-uno-main parrafo-dos-main"; }
+      .main .parrafos-main .parrafo-uno-main {
+        padding-right: 2rem; }
+      .main .parrafos-main .parrafo-dos-main {
+        padding-left: 2rem; }
+      .main .parrafos-main .titulo-main {
+        grid-area: titulo-main; }
+      .main .parrafos-main .parrafo-uno-main {
+        grid-area: parrafo-uno-main; }
+      .main .parrafos-main .parrafo-dos-main {
+        grid-area: parrafo-dos-main; }
+    .main .img-index .main-img1 {
+      width: 15%; }
+    .main .img-index .main-img2 {
+      width: 15%; }
+    .main .img-index .main-img3 {
+      width: 15%; }
+    .main .img-index .main-img4 {
+      width: 25%; }
+    .main .contactos {
+      display: flex;
+      justify-content: space-around; }
+    .main .flores {
+      display: block;
+      text-align: center; } }
 
 /*Reset*/
 * {
@@ -22,13 +227,12 @@ $color-footer: rgb(138, 83, 83);
 
 /*Propiedades de la página index.html*/
 body {
-  background-color: whitesmoke;
-  /*css del main con Grid */ }
-  body header header div h1 div {
+  background-color: whitesmoke; }
+  body header .tituloprincipal {
     color: #310731;
     font-family: 'Stick No Bills', sans-serif;
     font-size: 4rem; }
-    body header header div h1 div .container-fluid {
+    body header .tituloprincipal .container-fluid {
       text-align: center; }
   body header a:link {
     color: black;
@@ -51,17 +255,25 @@ body {
       font-style: normal;
       grid-area: titulo-main; }
     body main .parrafos-main {
-      margin: 2rem;
-      padding: 2rem;
-      display: grid;
-      grid-template-areas: "parrafo-uno-main parrafo-dos-main";
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 1.7rem; }
+      display: flex;
+      flex-direction: column;
+      color: #1c362e;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.7rem;
+      margin: 2 rem; }
+      body main .parrafos-main .parrafo-uno-main {
+        margin: 2rem;
+        font-size: 1.7rem; }
+      body main .parrafos-main .parrafo-dos-main {
+        margin: 2rem;
+        font-size: 1.7rem; }
     body main .img-index {
-      display: flex-row;
-      margin: 1rem;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      align-content: center;
+      margin: 1rem; }
       body main .img-index .main-img1 {
         width: 70%;
         align-items: center;
@@ -75,7 +287,7 @@ body {
         align-items: center;
         margin: 1rem; }
       body main .img-index .main-img4 {
-        width: 100%;
+        width: 70%;
         align-items: center;
         margin: 1rem; }
   body .footer {

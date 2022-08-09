@@ -1,19 +1,18 @@
 /*Propiedades de la página Conoceme*/
 main{
     .titulo-me {
-        display: flex;
-        justify-content: center;
-        color: rgb(28, 54, 46);
-        font-size: 2rem;
+        @include flex;
+        color: $colortitulospricipales;
+        font-size: map-get($map: $titulo-standar, $key: font-size-standar );
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        margin: 1rem;
-        padding: 1rem;
+        margin: map-get($map: $titulo-standar, $key:margin-standar );
+        padding: map-get($map: $titulo-standar, $key: padding-standar );
     }
      
     .main-parrafo3{
-        color: rgb(16, 63, 16);
+        color: $colorparrafos;
         font-size: 1.2rem;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family:$fuenteparrafos;
         margin:1.5rem;
         text-align: center;
     }
@@ -22,6 +21,10 @@ main{
     .contactos{
         text-align: center;
         text-decoration: none;
+        ul li:hover{
+            background-color: rgb(206, 206, 155);
+            transform: scale(1.5,1.5);      
+        }
         .contactotelefono:hover{
             transform: scale(1.1,1.1);
         }
@@ -32,12 +35,6 @@ main{
          
         .contactomail:hover{
             transform: scale(1.1,1.1);
-        }
-         
-        main nav ul li:hover{
-            background-color: rgb(206, 206, 155);
-            transform: scale(1.5,1.5);
-           
         }
     }
    

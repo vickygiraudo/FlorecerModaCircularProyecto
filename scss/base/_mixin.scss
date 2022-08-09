@@ -1,0 +1,17 @@
+//mixin propiedades 
+@mixin flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+//se aplica el @include flex en la página _comunidad, _conoceme, _contactos, _mediaqueris y en style. 
+
+@mixin flexspacearound{
+    display: flex;
+    justify-content: space-around;
+}
+
+//se aplica @include flexspacearound en la pagina _mediaqueris en la parte de conoceme y en img-index y contactos.

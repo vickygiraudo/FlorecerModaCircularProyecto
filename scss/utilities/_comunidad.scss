@@ -1,7 +1,8 @@
 /*Propiedades de página Comunidad Ecofriendly*/
 main{
     .titulo-main-eco{
-        color: rgb(46, 46, 66);
+        @include flex;
+        color: $colortitulospricipales;
         font-size: 2rem;
         margin: 1rem;
         text-align: center;
@@ -10,9 +11,7 @@ main{
         text-shadow: 1px 1px black;
     }
     .video-main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         margin-bottom: 2rem;
         padding: 0.5rem;
     }    
