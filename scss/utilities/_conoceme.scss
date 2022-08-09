@@ -1,0 +1,47 @@
+/*Propiedades de la página Conoceme*/
+main{
+    .titulo-me {
+        display: flex;
+        justify-content: center;
+        color: rgb(28, 54, 46);
+        font-size: 2rem;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 1rem;
+        padding: 1rem;
+    }
+     
+    .main-parrafo3{
+        color: rgb(16, 63, 16);
+        font-size: 1.2rem;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin:1.5rem;
+        text-align: center;
+    }
+     
+     
+    .contactos{
+        text-align: center;
+        text-decoration: none;
+        .contactotelefono:hover{
+            transform: scale(1.1,1.1);
+        }
+         
+        .main-instagram:hover{
+            transform: scale(1.1,1.1);
+        }
+         
+        .contactomail:hover{
+            transform: scale(1.1,1.1);
+        }
+         
+        main nav ul li:hover{
+            background-color: rgb(206, 206, 155);
+            transform: scale(1.5,1.5);
+           
+        }
+    }
+   
+}
+
+ 
+

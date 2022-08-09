@@ -1,0 +1,269 @@
+//variables
+$color-principal: whitesmoke;
+$color-secundario: rgb(218, 196, 171);
+$color-footer: rgb(138, 83, 83);
+ 
+//import variables 
+@import "utilities/variables";
+//import páginas
+@import "utilities/conoceme";
+@import "utilities/contactos";
+@import "utilities/comunidad";
+@import "utilities/productos";
+@import "utilities/media-queris";
+
+
+/*Reset*/
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+ }
+ 
+ /*Propiedades de la página index.html*/  
+body {
+    background-color:whitesmoke;
+    header{
+        .tituloprincipal {
+            color: rgb(49, 7, 49);
+            font-family: 'Stick No Bills', sans-serif;
+            font-size: 4rem;
+            .container-fluid{
+            text-align: center;
+            }
+        }
+        a:link{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+           
+        }
+         
+        a:visited{
+            color: black;
+            margin: 0rem;
+            padding: 0.5rem;
+        }
+
+    }     
+   
+    /*css del main con Grid */
+    main{
+        background-color: rgb(218, 196, 171);
+        .floresfondo{
+        display: none;}
+    
+        .titulo-main {
+     
+            font-size: 2.5rem;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            text-align: center;
+            font-style: normal;
+            grid-area: titulo-main;
+        }
+         
+        .parrafos-main{
+            margin: 2rem;
+            padding: 2rem;
+            display: grid;
+            grid-template-areas: "parrafo-uno-main parrafo-dos-main";
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.7rem;
+        }
+         
+        .img-index{
+            display: flex-row;
+            margin:1rem;  
+            justify-content: center;  
+            align-items: center;
+            .main-img1{
+                width: 70%;
+                align-items: center;
+                margin: 1rem;
+            }
+             
+            .main-img2{
+                width: 70%;
+                align-items: center;
+                margin: 1rem;
+            }
+             
+            .main-img3{
+                width: 70%;
+                align-items: center;
+                margin: 1rem;
+            }
+             
+            .main-img4{
+                width: 100%;
+                align-items: center;
+                margin: 1rem;
+            }
+        }
+    
+    }
+    .footer {
+        color: aliceblue;
+        background-color: rgb(138, 83, 83);
+        padding: 1rem;
+        text-align: right;
+        font-weight: bold;
+    }
+ 
+}
+ 
+/* Media Queris - Mobile First */
+
+@import "utilities/media-queris";
+
+/* Media Queris min-width:768px and max-widht:1200px*/
+ 
+@media (min-width:768px) and (max-width:1200px) {
+ 
+    main{
+       color: rgb(55, 44, 44);
+       font-family: 'Questrial', sans-serif;
+       font-size: 1.7rem;
+       margin:1.5rem;
+       .floresfondo{
+         display: block;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+        }
+        .titulo-main{
+            grid-area: titulo-main ;
+        }
+        .parrafo-uno-main {
+            grid-area: parrafo-uno-main ;
+        }
+
+        .parrafo-dos-main {
+            grid-area: parrafo-dos-main ;
+        }
+     
+        .parrafo-uno-main {
+            margin: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+       
+        .parrafo-dos-main {
+            margin: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .img-index{
+            display: grid;
+            grid-template-areas:"main-img1 main-img2"
+                                "main-img3 main-img4";
+            margin:1rem;  
+            justify-content: center;  
+            align-items: center;
+            .main-img1{
+                width: 60%;
+                align-items: center;
+                grid-area: main-img1;
+                margin: 1rem;
+            }
+           
+            .main-img2{
+                width: 50%;
+                align-items: center;
+                grid-area: main-img2;
+                margin: 1rem;
+            }
+           
+            .main-img3{
+                width: 60%;
+                align-items: center;
+                grid-area: main-img3;
+                margin: 1rem;
+            }
+           
+            .main-img4{
+                width: 80%;
+                align-items: center;
+                grid-area: main-img4;
+                margin: 1rem;
+            }
+    
+        } 
+        
+        /*media queris pagina conoceme*/
+    
+        .contactos{
+         display: flex;
+         justify-content: space-around;
+        }
+
+          /*media queris pagina contacto*/
+        .flores{
+          display: block;
+          text-align: center;
+          margin: 1rem;
+          width: 20%;
+        }
+
+    }      
+   
+}
+ 
+/* Media Queris - Pantalla min-width:1024px */
+ 
+@media screen and (min-width:1200px){
+    main{
+        .floresfondo{
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+       
+        .logoflor{
+            display: none;
+        }
+     
+        .img-index{
+            display: flex;
+            justify-content: space-around;
+            .main-img1{
+                grid-area: main-img1;
+                width: 15%;
+                 
+            }
+             
+            .main-img2{
+                grid-area: main-img2;
+                width: 15%;
+             
+            }
+             
+            .main-img3{
+                grid-area: main-img3;
+                width: 15%;
+            }
+             
+            .main-img4 {
+                grid-area: main-img4;
+                width: 25%;
+            }
+
+        }
+        
+        /*media queris pagina conoceme*/
+        .contactos{
+           display: flex;
+           justify-content: space-around;
+        }
+ 
+        /*media queris pagina contacto*/
+        .flores{
+         display: block;
+         text-align: center;
+        }  
+    }
+   
+}
