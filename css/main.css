@@ -155,12 +155,12 @@ main .pantalonessm {
         justify-content: center;
         align-items: center; }
         body .main .img-index .main-img1 {
-          width: 60%;
+          width: 65%;
           align-items: center;
           grid-area: main-img1;
           margin: 1rem; }
         body .main .img-index .main-img2 {
-          width: 50%;
+          width: 65%;
           align-items: center;
           grid-area: main-img2;
           margin: 1rem; }
@@ -170,7 +170,7 @@ main .pantalonessm {
           grid-area: main-img3;
           margin: 1rem; }
         body .main .img-index .main-img4 {
-          width: 80%;
+          width: 85%;
           align-items: center;
           grid-area: main-img4;
           margin: 1rem; }
@@ -204,14 +204,27 @@ main .pantalonessm {
         grid-area: parrafo-uno-main; }
       .main .parrafos-main .parrafo-dos-main {
         grid-area: parrafo-dos-main; }
-    .main .img-index .main-img1 {
-      width: 15%; }
-    .main .img-index .main-img2 {
-      width: 15%; }
-    .main .img-index .main-img3 {
-      width: 15%; }
-    .main .img-index .main-img4 {
-      width: 25%; }
+    .main .img-index {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+      .main .img-index .main-img1 {
+        width: 22%;
+        margin-left: 1rem; }
+      .main .img-index .main-img2 {
+        width: 22%; }
+      .main .img-index .main-img3 {
+        width: 15%; }
+      .main .img-index .main-img4 {
+        width: 23%;
+        margin-right: 1rem;
+        padding-right: 1rem; }
     .main .contactos {
       display: flex;
       justify-content: space-around; }
