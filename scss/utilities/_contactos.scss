@@ -7,8 +7,9 @@ main{
            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
            font-size: 3rem;
            margin: 2rem 1rem 1.5rem 1rem;
-           padding: 2rem;
-            }
+           padding: 1.5rem;
+         }
+
          div {
              @include flex;
              color:#111425;
@@ -28,14 +29,15 @@ main{
          .botones2{
             @extend %botones;
             }
+            
 
     }
     
     .flores{
        display: none;
     }
-    .concatos{
-        @include flexspacearound;
-    }
+
+    
+    
 } 
 
