@@ -208,7 +208,8 @@ main .pantalonessm {
         grid-area: parrafo-dos-main; }
     body .main .img-index {
       display: grid;
-      grid-template-areas: "main-img1 main-img2" "main-img3 main-img4";
+      grid-template-areas: "main-img1 main-img2"
+ "main-img3 main-img4";
       margin: 1rem;
       justify-content: center;
       align-items: center; }
