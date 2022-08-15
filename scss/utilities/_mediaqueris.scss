@@ -71,23 +71,20 @@
                     margin: 1rem;
                 }
         
-            } 
-    }
+            }         
+            /*media queris pagina conoceme*/
+            .contactos{
+               @include flexspacearound;
+            }
         
-        /*media queris pagina conoceme*/
-    
-        .contactos{
-         @include flexspacearound;
+            /*media queris pagina contacto*/
+            .flores{
+              display: block;
+              text-align: center;
+              margin: 1rem;
+              width: 10%;
+            }    
         }
-
-          /*media queris pagina contacto*/
-        .flores{
-          display: block;
-          text-align: center;
-          margin: 1rem;
-          width: 10%;
-        }
-
     }      
    
 }
@@ -153,6 +150,22 @@
         /*Media queris página conoceme y comunidad*/
         .contactos{
            @include flexspacearound;
+           ul li:hover{
+             background-color: rgb(206, 206, 155);
+             transform: scale(1.5,1.5);      
+            }
+        
+           .contactotelefono:hover{
+              transform: scale(1.1,1.1);
+            }
+         
+           .main-instagram:hover{
+              transform: scale(1.1,1.1);
+            }
+         
+           .contactomail:hover{
+              transform: scale(1.1,1.1);
+            }
         }
  
         /*Media queris página contacto*/
@@ -160,6 +173,5 @@
          display: block;
          text-align: center;
         }  
-    }
-   
+    }   
 }

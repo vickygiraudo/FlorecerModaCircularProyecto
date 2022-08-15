@@ -8,37 +8,17 @@ main{
         margin: map-get($map: $titulo-standar, $key:margin-standar );
         padding: map-get($map: $titulo-standar, $key: padding-standar );
     }
-     
     .main-parrafo3{
         color: $colorparrafos;
         font-size: 1.2rem;
         font-family:$fuenteparrafos;
         margin:1.5rem;
         text-align: center;
-    }
-     
-     
+    }     
     .contactos{
         text-align: center;
         text-decoration: none;
-        ul li:hover{
-            background-color: rgb(206, 206, 155);
-            transform: scale(1.5,1.5);      
-        }
-        
-        .contactotelefono:hover{
-            transform: scale(1.1,1.1);
-        }
-         
-        .main-instagram:hover{
-            transform: scale(1.1,1.1);
-        }
-         
-        .contactomail:hover{
-            transform: scale(1.1,1.1);
-        }
-    }
-   
+    } 
 }
 
  

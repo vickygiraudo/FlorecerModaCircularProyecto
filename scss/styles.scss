@@ -5,6 +5,7 @@
 @import "base/maps";
 @import "base/extend";
 //import páginas - carpeta utilities 
+@import "utilities/index";
 @import "utilities/conoceme";
 @import "utilities/contactos";
 @import "utilities/comunidad";
@@ -19,108 +20,4 @@
     box-sizing: border-box;
 }
  
-/*Propiedades de la página index.html*/  
-body {
-    background-color: $color-principal;
-    header{
-        .tituloprincipal {
-            color: rgb(49, 7, 49);
-            font-family: 'Stick No Bills', sans-serif;
-            font-size: 4rem;
-            .container-fluid{
-            text-align: center;
-            }
-        }
-        a:link{
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-           
-        }
-         
-        a:visited{
-            color: black;
-            margin: 0.5rem;
-            padding: 0.5rem;
-        }
 
-    }     
-   
-    main{
-        background-color: $color-secundario;
-        .floresfondo{  
-          display: none;
-        }
-        
-        .titulo-main {
-     
-            font-size: 2.5rem;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            text-align: center;
-            font-style: normal;
-            grid-area: titulo-main;
-        }
-         
-        .parrafos-main{
-            display: flex;
-            flex-direction: column; 
-            color: $colorparrafos;
-            font-family: $fuenteparrafos;
-            font-size: 1.7rem;
-            margin: 2 rem;
-            .parrafo-uno-main{
-                margin: 2rem;
-                font-size: 1.7rem;
-            }
-            .parrafo-dos-main{
-                margin: 2rem;
-                font-size: 1.7rem;
-            }
-        }
-
-    
-         
-        .img-index{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            margin:1rem;  
-            .main-img1{
-                width: 70%;
-                align-items: center;
-                margin: 1rem;
-            }
-             
-            .main-img2{
-                width:70%;
-                align-items: center;
-                margin: 1rem;
-            }
-             
-            .main-img3{
-                width: 70%;
-                align-items: center;
-                margin: 1rem;
-            }
-             
-            .main-img4{
-                width: 70%;
-                align-items: center;
-                margin: 1rem;
-            }
-        }
-    
-    }
-    .footer {
-        color: map-get($map: $footer-standar, $key: color-standar );
-        background-color: $color-footer;
-        padding: map-get($map: $footer-standar, $key: padding-standar );
-        text-align: map-get($map: $footer-standar, $key: text-align-standar);
-        font-weight: map-get($map: $footer-standar, $key: font-weight-standar );
-    }
- 
-}
