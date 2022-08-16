@@ -1,32 +1,33 @@
 /*Propiedades de la página contactos */
 main{
     form{
+      FIELDset{
          legend {
-           @include flex;
-           color: $colortitulospricipales;
-           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-           font-size: 3rem;
-           margin: 2rem 1rem 1.5rem 1rem;
-           padding: 1.5rem;
+            @include flex;
+            color: $colortitulospricipales;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3rem;    
+            text-align: center        
          }
-
+ 
          div {
-             @include flex;
-             color:#111425;
-             font-family: Verdana, Geneva, Tahoma, sans-serif;
-             font-size: 1.2rem;
-             width:bold;
-             margin: 1rem;
-             padding: 1rem;
-            }
-        
+            @include flex;
+            color:#111425;
+            font-family: Verdana, Geneva, Tahoma,sans-serif;
+            font-size: 1.2rem;
+            width:bold;
+            margin: 1rem;
+            padding: 1rem;
+         }
          .botones{
             @extend %botones;
-            }
-         
+         }
+          
          .botones2{
             @extend %botones;
-            }
+         }
+      }
+         
     }
     
     .flores{

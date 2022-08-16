@@ -1,5 +1,5 @@
 @charset "UTF-8";
-main form .botones, main form .botones2 {
+main form FIELDset .botones, main form FIELDset .botones2 {
   border: 0.2rem solid black;
   padding: 1rem;
   margin: 1rem; }
@@ -101,7 +101,7 @@ main .contactos {
   text-decoration: none; }
 
 /*Propiedades de la página contactos */
-main form legend {
+main form FIELDset legend {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -110,17 +110,16 @@ main form legend {
   color: #1b0606;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 3rem;
-  margin: 2rem 1rem 1.5rem 1rem;
-  padding: 1.5rem; }
+  text-align: center; }
 
-main form div {
+main form FIELDset div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: center;
   align-items: center;
   color: #111425;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma,sans-serif;
   font-size: 1.2rem;
   width: bold;
   margin: 1rem;
@@ -208,8 +207,7 @@ main .pantalonessm {
         grid-area: parrafo-dos-main; }
     body .main .img-index {
       display: grid;
-      grid-template-areas: "main-img1 main-img2"
- "main-img3 main-img4";
+      grid-template-areas: "main-img1 main-img2" "main-img3 main-img4";
       margin: 1rem;
       justify-content: center;
       align-items: center; }
