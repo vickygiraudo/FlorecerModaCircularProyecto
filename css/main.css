@@ -1,5 +1,5 @@
 @charset "UTF-8";
-main form FIELDset .botones, main form FIELDset .botones2 {
+main form FIELDset .botonesgeneral .botones, main form FIELDset .botonesgeneral .botones2 {
   border: 0.2rem solid black;
   padding: 1rem;
   margin: 1rem; }
@@ -96,10 +96,6 @@ main .main-parrafo3 {
   margin: 1.5rem;
   text-align: center; }
 
-main .contactos {
-  text-align: center;
-  text-decoration: none; }
-
 /*Propiedades de la página contactos */
 main form FIELDset legend {
   display: flex;
@@ -109,8 +105,7 @@ main form FIELDset legend {
   align-items: center;
   color: #1b0606;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 3rem;
-  text-align: center; }
+  font-size: 3rem; }
 
 main form FIELDset div {
   display: flex;
@@ -124,6 +119,38 @@ main form FIELDset div {
   width: bold;
   margin: 1rem;
   padding: 1rem; }
+  main form FIELDset div label {
+    margin: 0.2rem;
+    font-weight: bold; }
+  main form FIELDset div input {
+    margin: 0.2rem; }
+
+main form FIELDset .botonesgeneral {
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+
+main .contactos {
+  text-align: center; }
+  main .contactos .contactotelefono {
+    text-align: center; }
+    main .contactos .contactotelefono .telefono {
+      list-style-type: none;
+      font-size: 1.2rem;
+      font-weight: bold; }
+  main .contactos .main-instagram {
+    text-align: center;
+    margin: 3rem; }
+    main .contactos .main-instagram .instagram {
+      text-align: center; }
+  main .contactos .contactomail {
+    text-align: center; }
+    main .contactos .contactomail .mail {
+      list-style-type: none;
+      font-size: 1rem;
+      font-weight: bold; }
 
 main .flores {
   display: none; }
@@ -234,11 +261,14 @@ main .pantalonessm {
     body .main .contactos {
       display: flex;
       justify-content: space-around; }
-    body .main .flores {
-      display: block;
-      text-align: center;
+    body .main .botonesgeneral {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+    body .main div label {
       margin: 1rem;
-      width: 10%; } }
+      font-weight: bold; } }
 
 /* Media Queris - Pantalla min-width:1024px */
 @media screen and (min-width: 1200px) {
@@ -294,9 +324,17 @@ main .pantalonessm {
         transform: scale(1.1, 1.1); }
       .main .contactos .contactomail:hover {
         transform: scale(1.1, 1.1); }
+    .main .botonesgeneral {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
     .main .flores {
       display: block;
-      text-align: center; } }
+      text-align: center; }
+    .main div label {
+      margin: 1rem;
+      font-weight: bold; } }
 
 /*Reset*/
 * {

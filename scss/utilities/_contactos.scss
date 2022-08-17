@@ -1,13 +1,12 @@
 /*Propiedades de la página contactos */
 main{
-    form{
+   form{
       FIELDset{
          legend {
             @include flex;
             color: $colortitulospricipales;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-size: 3rem;    
-            text-align: center        
+            font-size: 3rem;            
          }
  
          div {
@@ -18,20 +17,66 @@ main{
             width:bold;
             margin: 1rem;
             padding: 1rem;
+            label{
+               margin: 0.2rem;
+               font-weight: bold
+            }
+            input{
+               margin: 0.2rem;
+            }
          }
-         .botones{
-            @extend %botones;
-         }
+
+         .botonesgeneral{
+            display: flex;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+         
+            .botones{
+              @extend %botones;
+            }
           
-         .botones2{
-            @extend %botones;
+           .botones2{
+              @extend %botones;
+            }
+         }
+         }
+         
+         
+   }
+
+   .contactos{
+      text-align: center;
+      .contactotelefono{
+         text-align: center;
+         .telefono{
+          list-style-type: none;
+          font-size: 1.2rem;
+          font-weight: bold;
          }
       }
-         
-    }
+      .main-instagram{
+         text-align: center;
+         margin: 3rem;
+         .instagram{
+            text-align: center;
+         }
+      }
+      .contactomail{
+         text-align: center;
+         .mail{
+          list-style-type: none;
+          font-size: 1rem;
+          font-weight: bold;
+         }
+      }
+   }
+
+   
     
-    .flores{
-       display: none;
-    }    
+   .flores{
+     display: none;
+   }    
 } 
 

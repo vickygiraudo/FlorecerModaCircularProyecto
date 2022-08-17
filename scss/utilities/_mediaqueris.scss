@@ -78,12 +78,19 @@
             }
         
             /*media queris pagina contacto*/
-            .flores{
-              display: block;
-              text-align: center;
-              margin: 1rem;
-              width: 10%;
-            }    
+            .botonesgeneral{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            
+            div{
+                label{
+                    margin: 1rem;
+                    font-weight: bold;
+                }
+            }
         }
     }      
    
@@ -169,9 +176,21 @@
         }
  
         /*Media queris página contacto*/
+        .botonesgeneral{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
         .flores{
          display: block;
          text-align: center;
         }  
+        div{
+            label{
+                margin: 1rem;
+                font-weight: bold;
+            }
+        }
     }   
 }
