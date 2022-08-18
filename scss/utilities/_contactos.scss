@@ -58,11 +58,22 @@ main{
       }
       .main-instagram{
          text-align: center;
-         margin: 3rem;
          .instagram{
             text-align: center;
+            list-style-type: none;
+            text-decoration: none;
+               
+            .entra{
+               list-style-type: none;
+               text-decoration: none;
+               font-size: 1rem;
+               font-weight: bold;
+               color: rgb(43, 38, 38);
+            }
          }
+         
       }
+      
       .contactomail{
          text-align: center;
          .mail{
@@ -72,8 +83,6 @@ main{
          }
       }
    }
-
-   
     
    .flores{
      display: none;
