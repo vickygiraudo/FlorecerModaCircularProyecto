@@ -1,8 +1,8 @@
 @charset "UTF-8";
 main form FIELDset .botonesgeneral .botones, main form FIELDset .botonesgeneral .botones2 {
   border: 0.2rem solid black;
-  padding: 1rem;
-  margin: 1rem; }
+  padding: 0.5rem;
+  margin: 0.5rem; }
 
 /*Propiedades de la página index.html*/
 body {
@@ -126,7 +126,6 @@ main form FIELDset div {
     margin: 0.2rem; }
 
 main form FIELDset .botonesgeneral {
-  display: flex;
   display: block;
   justify-content: center;
   align-items: center;
