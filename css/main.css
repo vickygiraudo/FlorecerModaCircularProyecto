@@ -190,22 +190,19 @@ main .remerassm {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #1b0606;
-  text-decoration: underline;
-  margin: 1rem; }
+  text-decoration: underline; }
 
 main .accesoriossm {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #1b0606;
-  text-decoration: underline;
-  margin: 1rem; }
+  text-decoration: underline; }
 
 main .pantalonessm {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #1b0606;
-  text-decoration: underline;
-  margin: 1rem; }
+  text-decoration: underline; }
 
 /* Media Queris - Mobile First */
 /* Media Queris min-width:768px and max-widht:1200px*/
@@ -240,7 +237,8 @@ main .pantalonessm {
         grid-area: parrafo-dos-main; }
     body .main .img-index {
       display: grid;
-      grid-template-areas: "main-img1 main-img2" "main-img3 main-img4";
+      grid-template-areas: "main-img1 main-img2"
+ "main-img3 main-img4";
       margin: 1rem;
       justify-content: center;
       align-items: center; }
