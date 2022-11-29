@@ -186,24 +186,28 @@ main .video-main {
   padding: 0.5rem; }
 
 /* Propiedades de la página Productos*/
+.img{
+  width: 150px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: 1rem;
+}
 
-main .remerassm {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  color: #1b0606;
-  text-decoration: underline; }
+.card {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
 
-main .accesoriossm {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  color: #1b0606;
-  text-decoration: underline; }
+.colorBoton{
+  color: white;
+  background-color: #310731;
+}
 
-main .pantalonessm {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  color: #1b0606;
-  text-decoration: underline; }
+.colorBoton:hover{
+  background-color: blueviolet;
+}
+
 
 /* Media Queris - Mobile First */
 /* Media Queris min-width:768px and max-widht:1200px*/

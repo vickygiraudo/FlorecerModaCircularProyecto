@@ -1,117 +1,171 @@
 
 // Mi proyecto se trata de una Tienda Online de moda circular.
 
-let productos //= parseInt(prompt ("¿A qué producto le darás una nueva vida? 1.Remera - 2.Pantalón - 3.Accesorios"))
+let productos 
 const seguirComprando = true;
 let totalCompra = 0; 
 let decision;
 
-// arreglo de productos
-const productosArray = ["tresremeras", "blusablanca", "remeramarron", "remeradetirasblanca", "jeannegro", "jeanblanco", "pantalonrosa", "mochilaverde", "lentesnike" ]
-console.log (productosArray)
-
 // clase producto
 class NuevoProducto{
-  constructor(id,name,price,stock,size){
+  constructor(id,name,price,stock,size,img){
     this.id = id;
     this.name = name;
     this.price = price;
     this.stock = stock;
     this.size = size;
+    this.img = img; 
+    this.cantidad= 1;
   }
 }
-const tresremeras = new NuevoProducto(1,'3 Remeras',10000,3,"S y M");
-productosArray.push(tresremeras);
-const blusablanca = new NuevoProducto(2,'Blusa Blanca',3500,1,"M");
-productosArray.push(blusablanca);
-const remeramarron = new NuevoProducto(3,'Remera Marrón',6000,1,"M");
-productosArray.push(remeramarron);
-const remeradetirasblanca = new NuevoProducto(4,'Remera de tiras Blanca',6000,1,"S");
-productosArray.push(remeradetirasblanca);
-constjeannegro  = new NuevoProducto(5,'Jean Negro',15000,1,"28");
-productosArray.push(jeannegro);
-const jeanblanco = new NuevoProducto(6,'Jean Blanco',11000,1,"26");
-productosArray.push(jeanblanco);
-const pantalonrosa = new NuevoProducto(7,'Pantalón Rosa',12000,1,"28");
-productosArray.push(pantalonrosa);
-const mochilaverde = new NuevoProducto(8,'Mochila Verde Quechua',10000,1,"18 Lt");
-productosArray.push(mochilaverde);
-const lentesnike = new NuevoProducto(9,'Lentes Nike',12000,1,"talle único");
-productosArray.push(lentesnike);
+const tresRemeras = new NuevoProducto(1,'3 Remeras',10000,3,"S y M", "../img/3RemerasMusculosas.jpeg")
+const blusaBlanca = new NuevoProducto(2,'Blusa Blanca',3500,1,"M", "../img/blusablanca.png");
+const remeraMarron = new NuevoProducto(3,'Remera Marrón',6000,1,"M", "../img/remeramarron.png");
+const remeraDeTirasBlanca = new NuevoProducto(4,'Remera de tiras Blanca',6000,1,"S", "../img/musculosablanca.png");
+const jeanNegro  = new NuevoProducto(5,'Jean Negro',15000,1,"28", "../img/jeannegro.png");
+const jeanBlanco = new NuevoProducto(6,'Jean Blanco',11000,1,"26", "../img/pantalonblanco.png");
+const pantalonRosa = new NuevoProducto(7,'Pantalón Rosa',12000,1,"28", "../img/pantalonrosa.png");
+const mochilaVerde = new NuevoProducto(8,'Mochila Verde Quechua',10000,1,"18 Lt", "../img/mochilaverde.png");
+const lentesNike = new NuevoProducto(9,'Lentes Nike',12000,1,"Talle único", "../img/lentesnike.png");
 
-console.log(productosArray)
+// arreglo de productos
 
-// manipulacion con DOM
+const productosArray = [tresRemeras, blusaBlanca, remeraMarron, remeraDeTirasBlanca, jeanNegro, jeanBlanco, pantalonRosa, mochilaVerde, lentesNike];
+console.log(productosArray);
 
-const selectProd = document.getElementById('listaropa')
-
-productosArray.forEach((elemento) => {
-  const optionProd = document.createElement('option')
-  optionProd.innerText = `${elemento.name}: $${elemento.price}`
-  optionProd.setAttribute('id', `${elemento.id}`)
-  selectProd.append(optionProd)
-})
-// carrito
-const carrito = []
-
-const botonIngresar = document.getElementById('ingresarProd')
-const finalizarCompra = document.getElementById('finalizar')
-
-botonIngresar.onclick = () => {
-  console.log(selectProd.selectedIndex)
-  const indexProd = selectProd.selectedIndex
-  const productoSeleccionado = productosArray[indexProd]
-  console.log(productoSeleccionado)
-  carrito.push(productoSeleccionado)
-  localStorage.setItem('ProductoSeleccionado',JSON.stringify(selectProd))
+// creo el carrito array 
+let carrito = [];
+//si hay algo en el local storage se carga en el carrito
+if (localStorage.getItem("carrito") ) {
+  carrito = JSON.parse(localStorage.getItem ("carrito"));
 }
 
-finalizarCompra.onclick = () => {
-  console.log(carrito)
-  let total = 0
-  carrito.forEach((prod) => {
-    total = total + prod.price
-  })
-  alert(
-    `Escogiste ${carrito.length} productos y el total de la compra es de ${total}`
-  )
+
+// manipulacion con DOM en el div contenedorProductos de la página productos de html
+const contenedorProductos = document.getElementById("contenedorProductos");
+
+//función para mostrar productos 
+const mostrarProductos = () => {
+  productosArray.forEach((productosArray) => {
+      const card = document.createElement("div");
+      card.classList.add ("col-xl-3", "col-md-6", "col-xs-12") 
+      card.innerHTML = `
+        <div class = "card">
+           <img src=" ${productosArray.img}" class= "card-img-top imgProductos" alt="${productosArray.name}">
+           <div class="card-body"> 
+           <h3 class="card-title"> ${productosArray.name} </h3>
+           <p class="card-text">$ ${productosArray.price} </p>
+           <button class="btn colorBoton" id="boton${productosArray.id}"> Agregar al carrito </button>
+           </div>
+        </div>
+      `
+      contenedorProductos.appendChild(card);
+
+      //Agregar productos al carrito:
+      const boton = document.getElementById (`boton ${productosArray.id}`);
+      boton.addEventListener("click", () => {
+        //agregarAlCarrito(productosArray.id)
+      })
+  }) 
+  
 }
+//función de agregar al carrito
 
-/*
-while (seguirComprando === true) {
-    if(productos === 1){
-        totalCompra = totalCompra + 4000
-    }else if (productos === 2){
-    totalCompra = totalCompra + 3500 
-    }else if(productos === 3){
-    totalCompra = totalCompra + 6000
-    }
-
-    decision = parseInt (prompt("¿Quiere seguir comprando? 1.Si 2.No"))
-    if(decision===1){
-    productos = parseInt (prompt ("¿Qué otro producto desea llevar? 1.Remera - 2.Pantalón - 3.Accesorios"))
+  const agregarAlCarrito = (id) =>{
+    let producto = productosArray.find ((producto)= productosArray.id === id);
+    const productoEnCarrito = carrito.find ((producto)=productosArray.id === id);
+    if (productoEnCarrito) {
+      productoEnCarrito.cantidad++;
     }else {
-      seguirComprando = false
-    }
-    alert(`El total de su compra es ${totalCompra}. Gracias por darle una nueva oportunidad a esta prenda!`)
+       carrito.push(producto)
+       //local storage 
+       localStorage.setItem("carrito", JSON.stringify(carrito));
+    } 
+    calcularTotal();
+  }
+
+mostrarProductos();
+
+//MOSTRAR CARRITO DE COMPRAS 
+
+const contenedorCarrito = document.getElementById("contenedorCarrito");
+
+const verCarrito = document.getElementById("verCarrito");
+
+verCarrito.addEventListener("click", () => {
+  mostrarCarrito();
+}  )
+
+//Función para mostrar carrito
+
+const mostrarCarrito = () => {
+  contenedorCarrito.innerHTML="";
+  carrito.forEach((producto) => {
+    const card = document.createElement("div");
+      card.classList.add ("col-xl-3", "col-md-6", "col-xs-12") 
+      card.innerHTML = `
+        <div class = "card">
+           <img src=" ${productosArray.img}" class= "card-img-top imgProductos" alt="${productosArray.name}">
+           <div class="card-body"> 
+           <h3 class="card-title"> ${productosArray.name} </h3>
+           <p class="card-text">$ ${productosArray.price} </p>
+           <p class="card-text">$ ${productosArray.cantidad} </p>
+           <button class="btn colorBoton" id="eliminar${productosArray.id}"> Eliminar Producto </button>
+           </div>
+        </div>
+      `
+      contenedorCarrito.appendChild(card);
+
+
+      //Eliminar productos del carrito
+      const boton = document.getElementById(`eliminar${productosArray.id}`);
+      boton.addEventListener("click", () => {
+        eliminarDelCarrito (productosArray.id);
+      })
+
+  })
+  calcularTotal();
+} 
+
+//Función que elimina el producto del carrito
+
+const eliminarDelCarrito = (id) =>{
+  const producto = carrito.find ((producto) = productosArray.id === id)
+  const indice = carrito.indexOf (producto);
+  carrito.splice (indice, 1);
+  mostrarCarrito();
+  //localstoage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
-const totalCompraConDescuento = descuento(totalCompra)
-function descuento(valor) {
-    let descuento = 0
-    if (valor <= 4000) {
-      descuento = 10
-    } else if (valor > 4000 && valor <= 6000) {
-      descuento = 15
-    } else {
-      descuento = 20
-    }
-    return valorFinal
+//Funcion vaciar carrito
+
+const vaciarCarrito = document.getElementById (vaciarCarrito);
+
+vaciarCarrito.addEventListener ("click", () => {
+   eliminarTodoElCarrito ();
+})
+
+//Función para eliminar todo el carrito
+
+const eliminarTodoElCarrito = () => {
+  carrito = [];
+  mostrarCarrito ();
+  //localstorage
+  localStorage.clear();
+};
+
+//mostrar el mensaje con el total de su compra
+ const total = document.getElementById(total);
+
+const calcularTotal = () => {
+   let totalCompra = 0;
+   carrito.forEach ((producto) => {
+    totalCompra += productosArray.price
+   })
+  total.innerHTML = ` $${totalCompra}`
 }
 
-alert(`El total de tu compra con descuento es ${totalCompraConDescuento}`)
-let valorDescuento = valor * (descuento / 100)
-let valorFinal = valor - valorDescuento
 
-*/
+
 
