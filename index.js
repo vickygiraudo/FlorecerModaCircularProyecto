@@ -1,14 +1,57 @@
 // Mi proyecto se trata de una Tienda Online de moda circular.
 
+//carrito
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+//contenedor productos
 const divCards = document.querySelector(`.cards`)
-const lista = document.querySelector(`#lista`)
 
-const productosJson = [];
+fetch("../productos.json")
+ .then(res => res.json())
+ .then(data => cargarProductos(data));
 
+
+ function cargarProductos(data){
+  //console.log(libros)
+  data.forEach(prod => {
+      const card = document.createElement('div')
+      card.innerHTML =  `
+         <div class = "card">
+            <img src=" ${prod.img}" class= "card-img-top imgProductos" alt="${prod.name}">
+            <div cls="card-body">
+            <h3 class="card-title"> ${prod.name} </h3>
+            <p class="card-text">$ ${prod.price} </p>
+            <button id="boton${prod.id}" class="btn btnComprar colorBoton" > Agregar al carrito </button>
+            </div>
+          </div>
+        `
+      divCards.appendChild(card);
+  })     
+
+  let btnComprar = document.querySelectorAll('.btnComprar'); // NodeList = [button1 button2 button3]
+  btnComprar.forEach(el =>{
+      el.addEventListener('click', (e) => {
+          agregarAlCarrito(e.target.id, data);
+      })
+  })
+}
+// -----
+function agregarAlCarrito(id, data){
+  console.log(data)
+  console.log(id)
+
+  const productoElegido = data.find( el => el.id === parseInt(id))
+  console.log(productoElegido)
+
+  carrito.push(productoElegido);
+  //guardar el carrito en localStorage.
+}
+
+/*
 const mostrarCategorias = async() => {
-  const categoriasFetch = await fetch (`categorias.json`);
+  const categoriasFetch = await fetch ("../categorias.json");
   const categoriasJson = await categoriasFetch.Json ();
-  console.log(categoriasJson)
+  //console.log(categoriasJson)
   categoriasJson.forEach(cat =>{
     const option = document.createElement(`option`)
     option.innerText = `${cat}`
@@ -17,7 +60,7 @@ const mostrarCategorias = async() => {
 }
 
 const buscarTodosProductos = async () =>{
-  const productosFetch = await fetch ("productos.json");
+  const productosFetch = await fetch ("../productos.json");
   const productosJson = await productosFetch.json ();
   console.log(productosJson)
 }
@@ -44,7 +87,7 @@ const buscarProductosPorCategoria = async () => {
   divCards.innerHTML = ""
   const categoriaElegida = lista.value;
   //console.log (categoriaElegida)
-  const productosFetch = await fetch (`productos.json}`)
+  const productosFetch = await fetch ("../productos.json");
   const productosJson = await productosFetch.json ();
   //console.log(productosJson);
   const productosFiltrados = productosJson.filter(prod => prod.category===categoriaElegida)
@@ -69,8 +112,9 @@ const buscarProductosPorCategoria = async () => {
 
 buscarTodosProductos ();
 mostrarCategorias();
-botonFiltrar.onclick = buscarProductosPorCategoria 
-
+const botonFiltrar = [];
+botonFiltrar.onclick = buscarProductosPorCategoria ()
+*/
 
 // Carrito de compras anterior al forEach 
 
@@ -140,12 +184,6 @@ boton.forEach( btn =>{
 })
  
  
-// creo el carrito array
-let carrito =  [];
-//si hay algo en el local storage se carga en el carrito
-if (localStorage.getItem("carrito") ) {
-  carrito = JSON.parse(localStorage.getItem ("carrito"));
-}
 
 const buscarProductosPorCategoria =
 // manipulacion con DOM en el div contenedorProductos de la página productos de html

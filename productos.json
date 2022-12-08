@@ -4,8 +4,7 @@
     "name":"3 Remeras",
     "price":10000,
     "size":"S y M",
-    "img":"img/3RemerasMusculosas.jpeg",
-    
+    "img":"../img/3RemerasMusculosas.jpeg",
     "category":"Remeras"},
 
     {
@@ -13,7 +12,7 @@
     "name":"Blusa Blanca",
     "price":3500,
     "size":"M",
-    "img":"img/blusablanca.png",
+    "img":"../img/blusablanca.png",
     "category":"Remeras"},
 
     
@@ -21,7 +20,7 @@
     "name":"Remera Marrón",
     "price":6000,
     "size":"M",
-    "img":"img/remeramarron.png",
+    "img":"../img/remeramarron.png",
     "category":"Remeras"},
 
     {
@@ -29,7 +28,7 @@
     "name":"Remera de tiras Blanca",
     "price":6000,
     "size":"S",
-    "img":"img/musculosablanca.png",
+    "img":"../img/musculosablanca.png",
     "category":"Remeras"},
 
     {
@@ -37,7 +36,7 @@
     "name":"Jean Negro",
     "price":15000,
     "size":"28",
-    "img":"img/jeannegro.png",
+    "img":"../img/jeannegro.png",
     "category":"Pantalones"
 },
 
@@ -46,7 +45,7 @@
     "name":"Jean Blanco",
     "price":11000,
     "size":"26",
-    "img":"img/pantalonblanco.png",
+    "img":"../img/pantalonblanco.png",
     "category":"Pantalones"},
 
     {
@@ -54,7 +53,7 @@
     "name":"Pantalón Rosa",
     "price":12000,
     "size":"28",
-    "img":"img/pantalonrosa.png",
+    "img":"../img/pantalonrosa.png",
     "category":"Pantalones"},
 
     {
@@ -62,7 +61,7 @@
     "name":"Mochila Verde Quechua",
     "price":10000,
     "size":"18 Lt",
-    "img":"img/mochilaverde.png",
+    "img":"../img/mochilaverde.png",
     "category":"Accesorios"},
 
     {
@@ -70,7 +69,7 @@
     "name":"Lentes Nike",
     "price":12000,
     "size":"Talle único",
-    "img":"img/lentesnike.png",
+    "img":"../img/lentesnike.png",
     "category":"Accesorios"}
 
 ]
