@@ -1,5 +1,80 @@
 // Mi proyecto se trata de una Tienda Online de moda circular.
+
+const divCards = document.querySelector(`.cards`)
+const lista = document.querySelector(`#lista`)
+
+const productosJson = [];
+
+const mostrarCategorias = async() => {
+  const categoriasFetch = await fetch (`categorias.json`);
+  const categoriasJson = await categoriasFetch.Json ();
+  console.log(categoriasJson)
+  categoriasJson.forEach(cat =>{
+    const option = document.createElement(`option`)
+    option.innerText = `${cat}`
+    lista.append(option)
+  })
+}
+
+const buscarTodosProductos = async () =>{
+  const productosFetch = await fetch ("productos.json");
+  const productosJson = await productosFetch.json ();
+  console.log(productosJson)
+}
+
+
  
+productosJson.forEach (prod=> {
+  const card = document.createElement("div");
+  const { img, name, price, id} = prod
+  divCards.innerHTML += `
+    <div class = "card">
+      <img src=" ${img}" class= "card-img-top imgProductos" alt="${name}">
+      <div cls="card-body">
+      <h3 class="card-title"> ${name} </h3>
+      <p class="card-text">$ ${price} </p>
+      <button class="btn colorBoton" id="boton${id}"> Agregar al carrito </button>
+      </div>
+    </div>
+   `
+})
+
+
+const buscarProductosPorCategoria = async () => {
+  divCards.innerHTML = ""
+  const categoriaElegida = lista.value;
+  //console.log (categoriaElegida)
+  const productosFetch = await fetch (`productos.json}`)
+  const productosJson = await productosFetch.json ();
+  //console.log(productosJson);
+  const productosFiltrados = productosJson.filter(prod => prod.category===categoriaElegida)
+  productosFiltrados.forEach (prod=> {
+    const card = document.createElement("div");
+    const { img, name, price, id} = prod
+    divCards.innerHTML += `
+      <div class = "card">
+        <img src=" ${img}" class= "card-img-top imgProductos" alt="${name}">
+        <div cls="card-body">
+        <h3 class="card-title"> ${name} </h3>
+        <p class="card-text">$ ${price} </p>
+        <button class="btn colorBoton" id="boton${id}"> Agregar al carrito </button>
+        </div>
+      </div>
+     `
+  })
+  
+
+}
+
+
+buscarTodosProductos ();
+mostrarCategorias();
+botonFiltrar.onclick = buscarProductosPorCategoria 
+
+
+// Carrito de compras anterior al forEach 
+
+/*
 // clase producto
 class NuevoProducto{
   constructor(id,name,price,size,img,category, cantidad){
@@ -28,13 +103,13 @@ const lentesNike = new NuevoProducto(9, 'Lentes Nike', 12000, "Talle único", ".
 const productosArray = [tresRemeras, blusaBlanca, remeraMarron, remeraDeTirasBlanca, jeanNegro, jeanBlanco, pantalonRosa, mochilaVerde, lentesNike];
  
 console.log(productosArray);
-
+ 
 // manipulacion con DOM en el div contenedorProductos de la página productos de html
-const contenedorProductos = document.getElementById("contenedorProductos"); 
-
+const contenedorProductos = document.getElementById("contenedorProductos");
+ 
 //función para mostrar productos
-
-
+ 
+ 
 productosArray.forEach(productosArray => {
   const card = document.createElement("div");
   card.classList.add ("col-xl-3", "col-md-6", "col-xs-12")
@@ -49,21 +124,22 @@ productosArray.forEach(productosArray => {
     </div>
    `
     contenedorProductos.appendChild(card);
-    
+   
   //Agregar productos al carrito:
-    
-    
-})
+   
+   
+}
+)
 const boton = document.querySelectorAll(`.btnComprar`);
-
-
+ 
+ 
 boton.forEach( btn =>{
   btn.addEventListener('click', (event) => {
     agregarAlCarrito(event.target.id, productosArray);
 })
 })
-
-
+ 
+ 
 // creo el carrito array
 let carrito =  [];
 //si hay algo en el local storage se carga en el carrito
@@ -71,8 +147,14 @@ if (localStorage.getItem("carrito") ) {
   carrito = JSON.parse(localStorage.getItem ("carrito"));
 }
 
+const buscarProductosPorCategoria =
+// manipulacion con DOM en el div contenedorProductos de la página productos de html
+const contenedorProductos = document.getElementById("contenedorProductos");
+*/
+ 
+/*
 //función de agregar al carrito
-
+ 
 const agregarAlCarrito = (id, arrayProductos) => {
   console.log(id);
   console.log(arrayProductos);
@@ -86,7 +168,7 @@ const agregarAlCarrito = (id, arrayProductos) => {
   //mostrarCarrito();
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-
+ 
 //MOSTRAR CARRITO DE COMPRAS
  
 const contenedorCarrito = document.getElementById("contenedorCarrito");
@@ -166,5 +248,6 @@ const calcularTotal = () => {
    })
   total.innerHTML = ` $${totalCompra}`
 }
- 
- 
+
+*/
+
