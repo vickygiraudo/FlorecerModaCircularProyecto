@@ -187,16 +187,22 @@ main .video-main {
 
 /* Propiedades de la página Productos*/
 .img{
-  width: 150px;
-  height: 200px;
+  width: 1rem;
+  height: 0.5rem;
   object-fit: contain;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
-.card {
+.divCard {
   display: flex;
-  align-items: center;
   margin: 0.5rem;
+}
+
+
+.btnComprar {
+  margin: 0.5rem;
+  padding: 1rem;
+  
 }
 
 .colorBoton{
