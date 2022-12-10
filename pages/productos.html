@@ -78,10 +78,16 @@
        <hr>
        <h4>Carrito de compras</h4>
        <h3>Total de la compra: <span id="totalCompra">0</span></h3>
-       <button class="btn btnVer colorBoton" id="verCarrito">Ver Carrito</button>
-       <button class="btn btnVaciar colorBoton" id="vaciarCarrito">Vaciar Carrito</button>
+
+       <div id="carrito"></div>
 
        <div id="contenedorCarrito" class="row cardsElim"></div>
+
+       <div id="precioTotal"></div>
+
+       <button class="btn btnVer colorBoton" id="verCarrito">Ver Carrito</button>
+       <button class="btn btnVaciar colorBoton" id="vaciarCarrito">Vaciar Carrito</button>
+       
 
     </main>
       
@@ -91,7 +97,11 @@
     
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-   <!-- Java script-->
-  <script src="../index.js"></script>
+   
+   <!-- Toastify-->
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <!-- Java script--> 
+   <script src="../index.js"></script>
 </body>
 </html>
